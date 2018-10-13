@@ -1,0 +1,24 @@
+baseURL = "https://nrayapati.github.io/devopsdays_library/"
+languageCode = "en-us"
+DefaultContentLanguage = "en"
+theme = "docdock"
+publishDir = "../public"
+title = "DevOpsDays KC 2018 Jenkins Workshop Resources"
+
+[params]
+editURL = "https://github.com/nrayapati/devopsdays_library/edit/master/docs/content/"
+noHomeIcon = false # default is false
+noSearch = false # default is false
+showVisitedLinks = true # default is false
+themeVariant = "" # choose theme variant "green", "gold" , "gray", "blue" (default)
+ordersectionsby = "weight" # ordersectionsby = "title"
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[[menu.shortcuts]]
+pre = "<h3>More</h3>"
+name = "<i class='fa fa-github'></i> Github repo"
+identifier = "ds"
+url = "https://github.com/nrayapati/devopsdays_library"
+weight = 10
