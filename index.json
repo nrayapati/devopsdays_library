@@ -1,0 +1,281 @@
+[
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/labs/basics/",
+	"title": "Basics Labs",
+	"tags": [],
+	"description": "",
+	"content": " List of Programs for Basics Lab.  Jenkinsfile     Declarative vs Scripted Pipeline     Node/Stage/Step/Groovy     Git vs Checkout SCM     Tools     Shell Script     Credentials     Stash and Unstash     Clean Workspace     Parameters     Strings     Parallel     "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/setup/",
+	"title": "Setup",
+	"tags": [],
+	"description": "Workshop Resources / Workstation Step instructions",
+	"content": "  Instructions to setup your laptop  Install Docker Create a folder for this workspace Pull the docker container Spin up Jenkins http://localhost:9090/    Install Docker (if it wasn\u0026rsquo;t installed before)  Mac: https://docs.docker.com/docker-for-mac/ Windows: https://docs.docker.com/docker-for-windows/install/  Create folder on your home folder (User\u0026rsquo;s home) cd mkdir DevOpsDays  Pull the docker container docker pull nrayapati/jenkins-2-centos7:latest  Or save it from the pen drive: docker load --input jenkins-2-centos7.tar  Spin up Jenkins container docker run -p 9090:8080 -e JENKINS_PASSWORD=admin -v ~/DevOpsDays/config:/var/lib/jenkins -v /var/run/docker.sock:/var/run/docker.sock -td --name jenkins_master nrayapati/jenkins-2-centos7:latest  "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/labs/advanced/buildname/",
+	"title": "Build Name",
+	"tags": ["Advanced"],
+	"description": "",
+	"content": " Build Name node { //this will replace the build number in the Jenkins UI. currentBuild.displayName = \u0026quot;DevOpsDaysKC - \u0026quot; + currentBuild.number //this will show up as a grey text block below the build number currentBuild.description = \u0026quot;Kansas City - 2018\u0026quot; }  "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/labs/basics/jenkinsfile/",
+	"title": "Jenkinsfile",
+	"tags": ["Basics"],
+	"description": "",
+	"content": " Jenkinsfile Code: node { echo 'Hello World' }  "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/labs/",
+	"title": "List of Labs",
+	"tags": [],
+	"description": "",
+	"content": " All Labs.  Basics Labs    Jenkinsfile   Declarative vs Scripted Pipeline   Node/Stage/Step/Groovy   Git vs Checkout SCM   Tools   Shell Script   Credentials   Stash and Unstash   Clean Workspace   Parameters   Strings   Parallel    Shared Pipeline Library Labs    Using Shared Library   Example   Closure vs Map    Advanced Labs    Build Name   Remote Loader   Lockable Resources   Config File Provider   Script Approval vs Sandbox   SSH Agent   Job DSL   Flow Control    "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/labs/library/",
+	"title": "Shared Pipeline Library Labs",
+	"tags": [],
+	"description": "",
+	"content": " List of Programs for Shared Pipeline Library Lab.  Using Shared Library     Example     Closure vs Map     "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/labs/library/using/",
+	"title": "Using Shared Library",
+	"tags": ["Shared Library"],
+	"description": "",
+	"content": " Using Shared Library @Library(\u0026quot;devopsdays@master\u0026quot;) _ @Library(\u0026quot;github.com/nrayapati/devopsdays_library@master\u0026quot;) _ node { def yaml = libraryResource 'org/devopsdays/test.yml' println yaml writeFile file: 'test.groovy', text: '''// Methods in this file will end up as object methods on the object that load returns. def lookAtThis(String whoAreYou) { echo \u0026quot;Look at this, ${whoAreYou}! You loaded this from another file!\u0026quot; } return this;''' def loadMethod = load 'test.groovy' loadMethod.lookAtThis(\u0026quot;Naresh\u0026quot;) }  "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/steps/creategitbranchv1/",
+	"title": "createGitBranchV1",
+	"tags": ["General"],
+	"description": "Create Git Branch Version 1",
+	"content": " createGitBranchV1 "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/labs/advanced/",
+	"title": "Advanced Labs",
+	"tags": [],
+	"description": "",
+	"content": " List of Programs for Advanced Lab.  Build Name     Remote Loader     Lockable Resources     Config File Provider     Script Approval vs Sandbox     SSH Agent     Job DSL     Flow Control     "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/labs/basics/declarative/",
+	"title": "Declarative vs Scripted Pipeline",
+	"tags": ["Basics"],
+	"description": "",
+	"content": " Declarative vs Scripted Declarative pipeline { agent any stages { stage('Example') { steps { echo 'Hello World' } } } post { always { echo 'I will always say Hello again!' } } }  Scripted node { try { echo 'Hello World' } finally { echo 'I will always say Hello again!' } }  "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/labs/library/example/",
+	"title": "Example",
+	"tags": ["Shared Library"],
+	"description": "",
+	"content": " Example @Library(\u0026quot;devopsdays\u0026quot;) _ println retryAndReturn { echo \u0026quot;DevOpsDays KC 2018\u0026quot; error \u0026quot;Expected..\u0026quot; }  "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/steps/",
+	"title": "Pipeline Steps",
+	"tags": [],
+	"description": "",
+	"content": " List of Pipeline Steps  createGitBranchV1     createGitBranchV2     retryAndReturn     retryWithPrompt     "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/labs/advanced/remoteloader/",
+	"title": "Remote Loader",
+	"tags": ["Advanced"],
+	"description": "",
+	"content": " Pipeline Remote Loader node { def remoteScript = fileLoader.fromGit('jenkins/release.groovy', \u0026quot;https://github.com/nrayapati/devopsdays_test.git\u0026quot;, 'master', null, '') remoteScript.prepare() remoteScript.release() remoteScript.clean() }  "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/steps/creategitbranchv2/",
+	"title": "createGitBranchV2",
+	"tags": ["General"],
+	"description": "Create Git Branch Version 2",
+	"content": " createGitBranchV2 "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/labs/library/closure/",
+	"title": "Closure vs Map",
+	"tags": ["Shared Library"],
+	"description": "",
+	"content": " Closure vs Map @Library(\u0026quot;devopsdays\u0026quot;) _ // Closure // Code at https://github.com/nrayapati/devopsdays_library/blob/master/vars/createGitBranchV1.groovy createGitBranchV1 { source = \u0026quot;master\u0026quot; target = \u0026quot;test\u0026quot; } // Map // Code at https://github.com/nrayapati/devopsdays_library/blob/master/vars/createGitBranchV2.groovy createGitBranchV2([source: 'gh-pages', target: 'test'])  "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/labs/advanced/lockable/",
+	"title": "Lockable Resources",
+	"tags": ["Advanced"],
+	"description": "",
+	"content": " Lockable REsources lock(quantity: 1, resource: 'devops1') { sleep time: 1, unit: 'MINUTES' }  "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/labs/basics/node/",
+	"title": "Node/Stage/Step/Groovy",
+	"tags": ["Basics"],
+	"description": "",
+	"content": " Node/Stage/Step/Groovy Code def roomNumber = 10 node { echo 'ANY' } node('LINUX') { echo 'LINUX' } node('DEVOPSDAYS') { stage('KC') { if(roomNumber==10) { echo 'Jenkins Pipelines' } } } node('TEST') { echo 'TEST' }  "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/steps/retryandreturn/",
+	"title": "retryAndReturn",
+	"tags": ["General"],
+	"description": "Retry And Return",
+	"content": " retryAndReturn "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/labs/advanced/configfile/",
+	"title": "Config File Provider",
+	"tags": ["Advanced"],
+	"description": "",
+	"content": " Config File Provider node { configFileProvider([configFile(fileId: 'sample_json', variable: 'testJsonFileName')]) { println testJsonFileName.toString() def testJsonfile = readFile \u0026quot;${testJsonFileName.toString()}\u0026quot; println testJsonfile } }  "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/labs/basics/scm/",
+	"title": "Git vs Checkout SCM",
+	"tags": ["Basics"],
+	"description": "",
+	"content": " Git vs Checkout SCM Git node { stage(\u0026quot;Checkout\u0026quot;) { git branch: 'test', url: 'https://github.com/nrayapati/devopsdays_test.git' sh 'ls -lrt' } }  Checkout SCM Code at https://github.com/nrayapati/devopsdays_test/blob/master/Jenkinsfile\nnode { checkout scm sh 'ls -lrt' }  "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/steps/retrywithprompt/",
+	"title": "retryWithPrompt",
+	"tags": ["General"],
+	"description": "Retry With Prompt",
+	"content": " retryWithPrompt Executes given body and when it throws an exception, it will prompt user with options to Retry, Ignore or Abort. If it should be retried. The body will then be executed again. If the user clicks abort, an exception will be thrown aborting the pipeline. And there is an option to ignore to proceed further, need to careful of doing so, as some of the steps which were failed may cause some trouble down the line for other actions, so user can ignore when the step being surrounded by this step manually.\nUsage  stepName - Name of step, to be more meaningful while message being shown up in the chat room. (Optional - Defaults to ?) timeOut - Timeout in minutes.  retryWithPrompt Examples retryWithPrompt ([timeOut: 10, stepName: 'Optional']) { echo 'I am fine.' }  retryWithPrompt ([timeOut: 10, stepName: 'testing']) { error 'something wrong.' }   Classic View - Waiting for User input   "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/labs/advanced/scriptapproval/",
+	"title": "Script Approval vs Sandbox",
+	"tags": ["Advanced"],
+	"description": "",
+	"content": " Script Approval vs Sandbox Code at https://github.com/nrayapati/devopsdays_library/blob/master/vars/retryWithPrompt.groovy#L17\n@Library(\u0026quot;devopsdays\u0026quot;) _ retryWithPrompt { error \u0026quot;Anticipated error...\u0026quot; }  "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/labs/basics/tools/",
+	"title": "Tools",
+	"tags": ["Basics"],
+	"description": "",
+	"content": " Tools node { def mvnHome stage('Preparation') { git 'https://github.com/jglick/simple-maven-project-with-tests.git' mvnHome = tool 'maven-3.5.4' } stage('Build') { if (isUnix()) { sh \u0026quot;'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean \u0026quot; } else { bat(/\u0026quot;${mvnHome}\\bin\\mvn\u0026quot; -Dmaven.test.failure.ignore clean /) } } }  "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/labs/advanced/sshagent/",
+	"title": "SSH Agent",
+	"tags": ["Advanced"],
+	"description": "",
+	"content": " SSH Agent node { step([$class: 'WsCleanup']) sshagent(['devopsdays_ssh']) { git branch: 'test', url: 'https://github.com/nrayapati/devopsdays_test.git' sh \u0026quot;ssh-keyscan -H github.com \u0026gt;\u0026gt; ~/.ssh/known_hosts\u0026quot; sh \u0026quot;git remote set-url origin git@github.com:nrayapati/devopsdays_test.git\u0026quot; sh \u0026quot;git config user.email naresh.rayapati@gmail.com\u0026quot; sh \u0026quot;git config user.name nrayapati\u0026quot; sh 'git checkout -b devopsdays' sh 'git push origin devopsdays' } }  "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/labs/basics/shell/",
+	"title": "Shell Script",
+	"tags": ["Basics"],
+	"description": "",
+	"content": " Shell Script node { git branch: 'test', url: 'https://github.com/nrayapati/devopsdays_test.git' def gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim() echo \u0026quot;Git commit sha: ${gitCommit}\u0026quot; }  "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/labs/basics/credentials/",
+	"title": "Credentials",
+	"tags": ["Basics"],
+	"description": "",
+	"content": " Credentials def printName def printPassword withCredentials([usernamePassword(credentialsId: 'devopsdays', passwordVariable: 'password', usernameVariable: 'userName')]) { // Binding variables echo userName echo password c // environment variables echo env.userName echo env.password printName = userName printPassword = password } echo env.userName echo env.password echo printName echo printPassword  "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/labs/advanced/jobdsl/",
+	"title": "Job DSL",
+	"tags": ["Advanced"],
+	"description": "",
+	"content": " Job DSL folder(\u0026quot;DevOpsDays/3_Best_Practices/test_folder\u0026quot;) { } pipelineJob('DevOpsDays/3_Best_Practices/test_folder/simple_pipeline') { displayName('simple_pipeline') description('simple_pipeline') definition { cpsScm { scm { git { remote { url('https://github.com/nrayapati/devopsdays_test.git') branch('master') } } } } } triggers { githubPush() } properties { buildDiscarder { strategy { logRotator { artifactDaysToKeepStr('2') artifactNumToKeepStr('2') daysToKeepStr('2') numToKeepStr('2') } } } } }  "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/labs/advanced/flow/",
+	"title": "Flow Control",
+	"tags": ["Advanced"],
+	"description": "",
+	"content": " Flow Control @Library(\u0026quot;devopsdays\u0026quot;) _ input message: 'INPUT EXAMPLE', ok: 'DevOpsDays', parameters: [string(defaultValue: '', description: '', name: 'STRING_PARAM', trim: false), booleanParam(defaultValue: false, description: '', name: 'BOOLEAN_PARAM')] retryWithPrompt { error \u0026quot;error during the demo\u0026quot; }  "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/labs/basics/stash/",
+	"title": "Stash and Unstash",
+	"tags": ["Basics"],
+	"description": "",
+	"content": " Stash vs Unstash node('LINUX') { sh \u0026quot;mkdir -p output\u0026quot; writeFile file: \u0026quot;output/somefile\u0026quot;, text: \u0026quot;Hey look, some text.\u0026quot; stash name: \u0026quot;stash1\u0026quot;, includes: \u0026quot;output/*\u0026quot; sh \u0026quot;rm -rf output\u0026quot; sh \u0026quot;ls -lrt\u0026quot; } node('DEVOPSDAYS') { sh 'ls -lrt' unstash name: \u0026quot;stash1\u0026quot; sh 'ls -lrt' }  "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/labs/basics/cleanws/",
+	"title": "Clean Workspace",
+	"tags": ["Basics"],
+	"description": "",
+	"content": " Clean Workspace / Try/Catch stage('test') { node('LINUX') { step([$class: 'WsCleanup']) git branch: 'test', url: 'https://github.com/nrayapati/devopsdays_test.git' step([$class: 'WsCleanup']) } } stage('test') { node('LINUX') { try { git branch: 'test', url: 'https://github.com/nrayapati/devopsdays_test.git' sh 'ls -lrt' } finally { deleteDir() sh 'ls -lrt' } } }  "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/labs/basics/params/",
+	"title": "Parameters",
+	"tags": ["Basics"],
+	"description": "",
+	"content": " Parameters def job_params = [booleanParam(defaultValue: false, description: '', name: 'DEPLOY'), string(defaultValue: 'Rao', description: 'User name with sudo access.', name: 'USER_NAME'), password(defaultValue: 'secret', description: 'Only required with SSH_USER', name: 'PASSWORD')] properties([parameters(job_params)]) println params.USER_NAME println env.USER_NAME println \u0026quot;${params.USER_NAME}\u0026quot;  "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/labs/basics/string/",
+	"title": "Strings",
+	"tags": ["Basics"],
+	"description": "",
+	"content": " Strings def myString = 'hello' assert '${myString} world' == 'hello world' assert \u0026quot;${myString} world\u0026quot; == 'hello world' // assert '''\\ // ${myString} world // foo bar // ''' == \u0026quot;\\\\\\nhello world\\nfoo bar\\n\u0026quot; assert \u0026quot;\u0026quot;\u0026quot;\\ ${myString} world foo bar \u0026quot;\u0026quot;\u0026quot;.stripIndent() == \u0026quot;hello world\\nfoo bar\\n\u0026quot;  "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/labs/basics/parallel/",
+	"title": "Parallel",
+	"tags": ["Basics"],
+	"description": "",
+	"content": " Parallel def branches = [:] branches[\u0026quot;ANY\u0026quot;] = { node { sleep time: 1, unit: 'MINUTES' } } branches[\u0026quot;LINUX\u0026quot;] = { node('LINUX') { sleep time: 1, unit: 'MINUTES' } } branches[\u0026quot;DEVOPSDAYS\u0026quot;] = { node('DEVOPSDAYS') { sleep time: 1, unit: 'MINUTES' } } parallel branches  "
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/",
+	"title": "DevOpsDays KC 2018",
+	"tags": [],
+	"description": "DevOpsDays KC 2018",
+	"content": " Jenkins Pipeline Jenkins 2 brings Pipeline as code, a new setup experience and other UI improvements, let you define delivery pipelines using concise Groovy scripts which deal elegantly with jobs involving persistence and asynchrony. Introduces a domain-specific language (DSL) that helps Jenkins users to model their software delivery pipelines as code, which can be checked in and version-controlled along with the rest of their project\u0026rsquo;s source code.\nDevOpsDays KC 2018 Workshop This repository contains instructions and labs related Jenkins Pipeline Workshop.\n"
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/tags/advanced/",
+	"title": "Advanced",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/tags/basics/",
+	"title": "Basics",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/tags/general/",
+	"title": "General",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/tags/shared-library/",
+	"title": "Shared Library",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

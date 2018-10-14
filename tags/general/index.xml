@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>General on DevOpsDays KC 2018 Jenkins Workshop Resources</title>
+    <link>https://nrayapati.github.io/devopsdays_library/tags/general/</link>
+    <description>Recent content in General on DevOpsDays KC 2018 Jenkins Workshop Resources</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 13 Oct 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://nrayapati.github.io/devopsdays_library/tags/general/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>createGitBranchV1</title>
+      <link>https://nrayapati.github.io/devopsdays_library/steps/creategitbranchv1/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nrayapati.github.io/devopsdays_library/steps/creategitbranchv1/</guid>
+      <description> createGitBranchV1 </description>
+    </item>
+    
+    <item>
+      <title>createGitBranchV2</title>
+      <link>https://nrayapati.github.io/devopsdays_library/steps/creategitbranchv2/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nrayapati.github.io/devopsdays_library/steps/creategitbranchv2/</guid>
+      <description> createGitBranchV2 </description>
+    </item>
+    
+    <item>
+      <title>retryAndReturn</title>
+      <link>https://nrayapati.github.io/devopsdays_library/steps/retryandreturn/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nrayapati.github.io/devopsdays_library/steps/retryandreturn/</guid>
+      <description> retryAndReturn </description>
+    </item>
+    
+    <item>
+      <title>retryWithPrompt</title>
+      <link>https://nrayapati.github.io/devopsdays_library/steps/retrywithprompt/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nrayapati.github.io/devopsdays_library/steps/retrywithprompt/</guid>
+      <description>retryWithPrompt Executes given body and when it throws an exception, it will prompt user with options to Retry, Ignore or Abort. If it should be retried. The body will then be executed again. If the user clicks abort, an exception will be thrown aborting the pipeline. And there is an option to ignore to proceed further, need to careful of doing so, as some of the steps which were failed may cause some trouble down the line for other actions, so user can ignore when the step being surrounded by this step manually.</description>
+    </item>
+    
+  </channel>
+</rss>

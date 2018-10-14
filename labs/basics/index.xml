@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Basics Labs on DevOpsDays KC 2018 Jenkins Workshop Resources</title>
+    <link>https://nrayapati.github.io/devopsdays_library/labs/basics/</link>
+    <description>Recent content in Basics Labs on DevOpsDays KC 2018 Jenkins Workshop Resources</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 13 Oct 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://nrayapati.github.io/devopsdays_library/labs/basics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Jenkinsfile</title>
+      <link>https://nrayapati.github.io/devopsdays_library/labs/basics/jenkinsfile/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nrayapati.github.io/devopsdays_library/labs/basics/jenkinsfile/</guid>
+      <description> Jenkinsfile Code: node { echo &#39;Hello World&#39; }  </description>
+    </item>
+    
+    <item>
+      <title>Declarative vs Scripted Pipeline</title>
+      <link>https://nrayapati.github.io/devopsdays_library/labs/basics/declarative/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nrayapati.github.io/devopsdays_library/labs/basics/declarative/</guid>
+      <description> Declarative vs Scripted Declarative pipeline { agent any stages { stage(&#39;Example&#39;) { steps { echo &#39;Hello World&#39; } } } post { always { echo &#39;I will always say Hello again!&#39; } } }  Scripted node { try { echo &#39;Hello World&#39; } finally { echo &#39;I will always say Hello again!&#39; } }  </description>
+    </item>
+    
+    <item>
+      <title>Node/Stage/Step/Groovy</title>
+      <link>https://nrayapati.github.io/devopsdays_library/labs/basics/node/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nrayapati.github.io/devopsdays_library/labs/basics/node/</guid>
+      <description> Node/Stage/Step/Groovy Code def roomNumber = 10 node { echo &#39;ANY&#39; } node(&#39;LINUX&#39;) { echo &#39;LINUX&#39; } node(&#39;DEVOPSDAYS&#39;) { stage(&#39;KC&#39;) { if(roomNumber==10) { echo &#39;Jenkins Pipelines&#39; } } } node(&#39;TEST&#39;) { echo &#39;TEST&#39; }  </description>
+    </item>
+    
+    <item>
+      <title>Git vs Checkout SCM</title>
+      <link>https://nrayapati.github.io/devopsdays_library/labs/basics/scm/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nrayapati.github.io/devopsdays_library/labs/basics/scm/</guid>
+      <description> Git vs Checkout SCM Git node { stage(&amp;quot;Checkout&amp;quot;) { git branch: &#39;test&#39;, url: &#39;https://github.com/nrayapati/devopsdays_test.git&#39; sh &#39;ls -lrt&#39; } }  Checkout SCM Code at https://github.com/nrayapati/devopsdays_test/blob/master/Jenkinsfile
+node { checkout scm sh &#39;ls -lrt&#39; }  </description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>https://nrayapati.github.io/devopsdays_library/labs/basics/tools/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nrayapati.github.io/devopsdays_library/labs/basics/tools/</guid>
+      <description> Tools node { def mvnHome stage(&#39;Preparation&#39;) { git &#39;https://github.com/jglick/simple-maven-project-with-tests.git&#39; mvnHome = tool &#39;maven-3.5.4&#39; } stage(&#39;Build&#39;) { if (isUnix()) { sh &amp;quot;&#39;${mvnHome}/bin/mvn&#39; -Dmaven.test.failure.ignore clean &amp;quot; } else { bat(/&amp;quot;${mvnHome}\bin\mvn&amp;quot; -Dmaven.test.failure.ignore clean /) } } }  </description>
+    </item>
+    
+    <item>
+      <title>Shell Script</title>
+      <link>https://nrayapati.github.io/devopsdays_library/labs/basics/shell/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nrayapati.github.io/devopsdays_library/labs/basics/shell/</guid>
+      <description> Shell Script node { git branch: &#39;test&#39;, url: &#39;https://github.com/nrayapati/devopsdays_test.git&#39; def gitCommit = sh(returnStdout: true, script: &#39;git rev-parse HEAD&#39;).trim() echo &amp;quot;Git commit sha: ${gitCommit}&amp;quot; }  </description>
+    </item>
+    
+    <item>
+      <title>Credentials</title>
+      <link>https://nrayapati.github.io/devopsdays_library/labs/basics/credentials/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nrayapati.github.io/devopsdays_library/labs/basics/credentials/</guid>
+      <description> Credentials def printName def printPassword withCredentials([usernamePassword(credentialsId: &#39;devopsdays&#39;, passwordVariable: &#39;password&#39;, usernameVariable: &#39;userName&#39;)]) { // Binding variables echo userName echo password c // environment variables echo env.userName echo env.password printName = userName printPassword = password } echo env.userName echo env.password echo printName echo printPassword  </description>
+    </item>
+    
+    <item>
+      <title>Stash and Unstash</title>
+      <link>https://nrayapati.github.io/devopsdays_library/labs/basics/stash/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nrayapati.github.io/devopsdays_library/labs/basics/stash/</guid>
+      <description> Stash vs Unstash node(&#39;LINUX&#39;) { sh &amp;quot;mkdir -p output&amp;quot; writeFile file: &amp;quot;output/somefile&amp;quot;, text: &amp;quot;Hey look, some text.&amp;quot; stash name: &amp;quot;stash1&amp;quot;, includes: &amp;quot;output/*&amp;quot; sh &amp;quot;rm -rf output&amp;quot; sh &amp;quot;ls -lrt&amp;quot; } node(&#39;DEVOPSDAYS&#39;) { sh &#39;ls -lrt&#39; unstash name: &amp;quot;stash1&amp;quot; sh &#39;ls -lrt&#39; }  </description>
+    </item>
+    
+    <item>
+      <title>Clean Workspace</title>
+      <link>https://nrayapati.github.io/devopsdays_library/labs/basics/cleanws/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nrayapati.github.io/devopsdays_library/labs/basics/cleanws/</guid>
+      <description> Clean Workspace / Try/Catch stage(&#39;test&#39;) { node(&#39;LINUX&#39;) { step([$class: &#39;WsCleanup&#39;]) git branch: &#39;test&#39;, url: &#39;https://github.com/nrayapati/devopsdays_test.git&#39; step([$class: &#39;WsCleanup&#39;]) } } stage(&#39;test&#39;) { node(&#39;LINUX&#39;) { try { git branch: &#39;test&#39;, url: &#39;https://github.com/nrayapati/devopsdays_test.git&#39; sh &#39;ls -lrt&#39; } finally { deleteDir() sh &#39;ls -lrt&#39; } } }  </description>
+    </item>
+    
+    <item>
+      <title>Parameters</title>
+      <link>https://nrayapati.github.io/devopsdays_library/labs/basics/params/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nrayapati.github.io/devopsdays_library/labs/basics/params/</guid>
+      <description> Parameters def job_params = [booleanParam(defaultValue: false, description: &#39;&#39;, name: &#39;DEPLOY&#39;), string(defaultValue: &#39;Rao&#39;, description: &#39;User name with sudo access.&#39;, name: &#39;USER_NAME&#39;), password(defaultValue: &#39;secret&#39;, description: &#39;Only required with SSH_USER&#39;, name: &#39;PASSWORD&#39;)] properties([parameters(job_params)]) println params.USER_NAME println env.USER_NAME println &amp;quot;${params.USER_NAME}&amp;quot;  </description>
+    </item>
+    
+    <item>
+      <title>Strings</title>
+      <link>https://nrayapati.github.io/devopsdays_library/labs/basics/string/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nrayapati.github.io/devopsdays_library/labs/basics/string/</guid>
+      <description> Strings def myString = &#39;hello&#39; assert &#39;${myString} world&#39; == &#39;hello world&#39; assert &amp;quot;${myString} world&amp;quot; == &#39;hello world&#39; // assert &#39;&#39;&#39;\ // ${myString} world // foo bar // &#39;&#39;&#39; == &amp;quot;\\\nhello world\nfoo bar\n&amp;quot; assert &amp;quot;&amp;quot;&amp;quot;\ ${myString} world foo bar &amp;quot;&amp;quot;&amp;quot;.stripIndent() == &amp;quot;hello world\nfoo bar\n&amp;quot;  </description>
+    </item>
+    
+    <item>
+      <title>Parallel</title>
+      <link>https://nrayapati.github.io/devopsdays_library/labs/basics/parallel/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nrayapati.github.io/devopsdays_library/labs/basics/parallel/</guid>
+      <description> Parallel def branches = [:] branches[&amp;quot;ANY&amp;quot;] = { node { sleep time: 1, unit: &#39;MINUTES&#39; } } branches[&amp;quot;LINUX&amp;quot;] = { node(&#39;LINUX&#39;) { sleep time: 1, unit: &#39;MINUTES&#39; } } branches[&amp;quot;DEVOPSDAYS&amp;quot;] = { node(&#39;DEVOPSDAYS&#39;) { sleep time: 1, unit: &#39;MINUTES&#39; } } parallel branches  </description>
+    </item>
+    
+  </channel>
+</rss>

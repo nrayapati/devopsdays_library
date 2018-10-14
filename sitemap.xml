@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/labs/basics/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/setup/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/labs/advanced/buildname/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/labs/basics/jenkinsfile/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/labs/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/labs/library/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/labs/library/using/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/steps/creategitbranchv1/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/labs/advanced/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/labs/basics/declarative/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/labs/library/example/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/steps/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/labs/advanced/remoteloader/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/steps/creategitbranchv2/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/labs/library/closure/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/labs/advanced/lockable/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/labs/basics/node/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/steps/retryandreturn/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/labs/advanced/configfile/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/labs/basics/scm/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/steps/retrywithprompt/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/labs/advanced/scriptapproval/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/labs/basics/tools/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/labs/advanced/sshagent/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/labs/basics/shell/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/labs/basics/credentials/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/labs/advanced/jobdsl/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/labs/advanced/flow/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/labs/basics/stash/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/labs/basics/cleanws/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/labs/basics/params/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/labs/basics/string/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/labs/basics/parallel/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/tags/advanced/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/tags/basics/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/tags/general/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/tags/shared-library/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nrayapati.github.io/devopsdays_library/tags/</loc>
+    <lastmod>2018-10-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

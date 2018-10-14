@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on DevOpsDays KC 2018 Jenkins Workshop Resources</title>
+    <link>https://nrayapati.github.io/devopsdays_library/tags/</link>
+    <description>Recent content in Tags on DevOpsDays KC 2018 Jenkins Workshop Resources</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 13 Oct 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://nrayapati.github.io/devopsdays_library/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Advanced</title>
+      <link>https://nrayapati.github.io/devopsdays_library/tags/advanced/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nrayapati.github.io/devopsdays_library/tags/advanced/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Basics</title>
+      <link>https://nrayapati.github.io/devopsdays_library/tags/basics/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nrayapati.github.io/devopsdays_library/tags/basics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>General</title>
+      <link>https://nrayapati.github.io/devopsdays_library/tags/general/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nrayapati.github.io/devopsdays_library/tags/general/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shared Library</title>
+      <link>https://nrayapati.github.io/devopsdays_library/tags/shared-library/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nrayapati.github.io/devopsdays_library/tags/shared-library/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shared Library on DevOpsDays KC 2018 Jenkins Workshop Resources</title>
+    <link>https://nrayapati.github.io/devopsdays_library/tags/shared-library/</link>
+    <description>Recent content in Shared Library on DevOpsDays KC 2018 Jenkins Workshop Resources</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 13 Oct 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://nrayapati.github.io/devopsdays_library/tags/shared-library/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Closure vs Map</title>
+      <link>https://nrayapati.github.io/devopsdays_library/labs/library/closure/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nrayapati.github.io/devopsdays_library/labs/library/closure/</guid>
+      <description> Closure vs Map @Library(&amp;quot;devopsdays&amp;quot;) _ // Closure // Code at https://github.com/nrayapati/devopsdays_library/blob/master/vars/createGitBranchV1.groovy createGitBranchV1 { source = &amp;quot;master&amp;quot; target = &amp;quot;test&amp;quot; } // Map // Code at https://github.com/nrayapati/devopsdays_library/blob/master/vars/createGitBranchV2.groovy createGitBranchV2([source: &#39;gh-pages&#39;, target: &#39;test&#39;])  </description>
+    </item>
+    
+    <item>
+      <title>Example</title>
+      <link>https://nrayapati.github.io/devopsdays_library/labs/library/example/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nrayapati.github.io/devopsdays_library/labs/library/example/</guid>
+      <description> Example @Library(&amp;quot;devopsdays&amp;quot;) _ println retryAndReturn { echo &amp;quot;DevOpsDays KC 2018&amp;quot; error &amp;quot;Expected..&amp;quot; }  </description>
+    </item>
+    
+    <item>
+      <title>Using Shared Library</title>
+      <link>https://nrayapati.github.io/devopsdays_library/labs/library/using/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nrayapati.github.io/devopsdays_library/labs/library/using/</guid>
+      <description> Using Shared Library @Library(&amp;quot;devopsdays@master&amp;quot;) _ @Library(&amp;quot;github.com/nrayapati/devopsdays_library@master&amp;quot;) _ node { def yaml = libraryResource &#39;org/devopsdays/test.yml&#39; println yaml writeFile file: &#39;test.groovy&#39;, text: &#39;&#39;&#39;// Methods in this file will end up as object methods on the object that load returns. def lookAtThis(String whoAreYou) { echo &amp;quot;Look at this, ${whoAreYou}! You loaded this from another file!&amp;quot; } return this;&#39;&#39;&#39; def loadMethod = load &#39;test.groovy&#39; loadMethod.lookAtThis(&amp;quot;Naresh&amp;quot;) }  </description>
+    </item>
+    
+  </channel>
+</rss>
