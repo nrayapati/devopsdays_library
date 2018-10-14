@@ -11,7 +11,7 @@
 	"title": "Setup",
 	"tags": [],
 	"description": "Workshop Resources / Workstation Step instructions",
-	"content": "  Instructions to setup your laptop  Install Docker Create a folder for this workspace Pull the docker container Spin up Jenkins http://localhost:9090/    Install Docker (if it wasn\u0026rsquo;t installed before)  Mac: https://docs.docker.com/docker-for-mac/ Windows: https://docs.docker.com/docker-for-windows/install/  Create folder on your home folder (User\u0026rsquo;s home) cd mkdir DevOpsDays  Pull the docker container docker pull nrayapati/jenkins-2-centos7:latest  Or save it from the pen drive: docker load --input jenkins-2-centos7.tar  Spin up Jenkins container docker run -p 9090:8080 -e JENKINS_PASSWORD=admin -v ~/DevOpsDays/config:/var/lib/jenkins -v /var/run/docker.sock:/var/run/docker.sock -td --name jenkins_master nrayapati/jenkins-2-centos7:latest  "
+	"content": "  Instructions to setup your laptop  Install Docker Create a folder for this workspace Pull the docker container Spin up Jenkins http://localhost:9090/    Install Docker (if it wasn\u0026rsquo;t installed before)  Mac: https://docs.docker.com/docker-for-mac/ Windows: https://docs.docker.com/docker-for-windows/install/  Create folder on your home folder (User\u0026rsquo;s home) cd mkdir DevOpsDays  Pull the docker container docker pull nrayapati/jenkins-2-centos7:latest  Or save it from the flash drive: docker load --input jenkins-2-centos7.tar  Spin up Jenkins container docker run -p 9090:8080 -e JENKINS_PASSWORD=admin -v ~/DevOpsDays/config:/var/lib/jenkins -v /var/run/docker.sock:/var/run/docker.sock -td --name jenkins_master nrayapati/jenkins-2-centos7:latest  "
 },
 {
 	"uri": "https://nrayapati.github.io/devopsdays_library/labs/advanced/buildname/",
