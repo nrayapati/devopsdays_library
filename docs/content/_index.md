@@ -12,3 +12,5 @@ Jenkins 2 brings Pipeline as code, a new setup experience and other UI improveme
 ### [DevOpsDays KC 2018 Workshop](https://www.devopsdays.org/events/2018-kansas-city/program/naresh-rayapati/)
 
 This repository contains instructions and labs related Jenkins Pipeline Workshop.
+
+[![DevOpsDays KC](https://www.devopsdays.org/events/2018-kansas-city/logo@2x.png)](https://www.devopsdays.org/events/2018-kansas-city/welcome/)
