@@ -18,7 +18,7 @@
 	"title": "Build Name",
 	"tags": ["Advanced"],
 	"description": "",
-	"content": " Build Name node { //this will replace the build number in the Jenkins UI. currentBuild.displayName = \u0026quot;DevOpsDaysKC - \u0026quot; + currentBuild.number //this will show up as a grey text block below the build number currentBuild.description = \u0026quot;Kansas City - 2018\u0026quot; }  "
+	"content": " Build Name node { //this will replace the build number in the Jenkins UI. currentBuild.displayName = \u0026quot;Cerner - \u0026quot; + currentBuild.number //this will show up as a grey text block below the build number currentBuild.description = \u0026quot;Kansas City\u0026quot; }  "
 },
 {
 	"uri": "https://nrayapati.github.io/devopsdays_library/labs/basics/jenkinsfile/",

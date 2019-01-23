@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Advanced on DevOpsDays KC 2018 Jenkins Workshop Resources</title>
+    <title>Advanced on Jenkins Pipeline Workshop Resources</title>
     <link>https://nrayapati.github.io/devopsdays_library/tags/advanced/</link>
-    <description>Recent content in Advanced on DevOpsDays KC 2018 Jenkins Workshop Resources</description>
+    <description>Recent content in Advanced on Jenkins Pipeline Workshop Resources</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 13 Oct 2018 00:00:00 +0000</lastBuildDate>
@@ -17,7 +17,7 @@
       <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>https://nrayapati.github.io/devopsdays_library/labs/advanced/buildname/</guid>
-      <description> Build Name node { //this will replace the build number in the Jenkins UI. currentBuild.displayName = &amp;quot;DevOpsDaysKC - &amp;quot; + currentBuild.number //this will show up as a grey text block below the build number currentBuild.description = &amp;quot;Kansas City - 2018&amp;quot; }  </description>
+      <description> Build Name node { //this will replace the build number in the Jenkins UI. currentBuild.displayName = &amp;quot;Cerner - &amp;quot; + currentBuild.number //this will show up as a grey text block below the build number currentBuild.description = &amp;quot;Kansas City&amp;quot; }  </description>
     </item>
     
     <item>

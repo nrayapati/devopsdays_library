@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Setup on DevOpsDays KC 2018 Jenkins Workshop Resources</title>
+    <title>Setup on Jenkins Pipeline Workshop Resources</title>
     <link>https://nrayapati.github.io/devopsdays_library/setup/</link>
-    <description>Recent content in Setup on DevOpsDays KC 2018 Jenkins Workshop Resources</description>
+    <description>Recent content in Setup on Jenkins Pipeline Workshop Resources</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 13 Oct 2018 00:00:00 +0000</lastBuildDate>
