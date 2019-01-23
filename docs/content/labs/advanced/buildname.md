@@ -11,8 +11,8 @@ lastmodifierdisplayname = "Naresh Rayapati"
 ```groovy
 node {
     //this will replace the build number in the Jenkins UI.
-    currentBuild.displayName = "DevOpsDaysKC - " + currentBuild.number
+    currentBuild.displayName = "Cerner - " + currentBuild.number
     //this will show up as a grey text block below the build number
-    currentBuild.description = "Kansas City - 2018"
+    currentBuild.description = "Kansas City"
 }
 ```

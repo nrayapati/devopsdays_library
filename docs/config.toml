@@ -3,7 +3,7 @@ languageCode = "en-us"
 DefaultContentLanguage = "en"
 theme = "docdock"
 publishDir = "../public"
-title = "DevOpsDays KC 2018 Jenkins Workshop Resources"
+title = "Jenkins Pipeline Workshop Resources"
 
 [params]
 editURL = "https://github.com/nrayapati/devopsdays_library/edit/master/docs/content/"
