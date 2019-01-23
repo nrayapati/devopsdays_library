@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>DevOpsDays KC 2018 on DevOpsDays KC 2018 Jenkins Workshop Resources</title>
+    <title>Jenkins Pipelines Workshop on DevOpsDays KC 2018 Jenkins Workshop Resources</title>
     <link>https://nrayapati.github.io/devopsdays_library/</link>
-    <description>Recent content in DevOpsDays KC 2018 on DevOpsDays KC 2018 Jenkins Workshop Resources</description>
+    <description>Recent content in Jenkins Pipelines Workshop on DevOpsDays KC 2018 Jenkins Workshop Resources</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 13 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://nrayapati.github.io/devopsdays_library/index.xml" rel="self" type="application/rss+xml" />
     

@@ -232,10 +232,10 @@
 },
 {
 	"uri": "https://nrayapati.github.io/devopsdays_library/",
-	"title": "DevOpsDays KC 2018",
+	"title": "Jenkins Pipelines Workshop",
 	"tags": [],
-	"description": "DevOpsDays KC 2018",
-	"content": " Jenkins Pipeline Jenkins 2 brings Pipeline as code, a new setup experience and other UI improvements, let you define delivery pipelines using concise Groovy scripts which deal elegantly with jobs involving persistence and asynchrony. Introduces a domain-specific language (DSL) that helps Jenkins users to model their software delivery pipelines as code, which can be checked in and version-controlled along with the rest of their project\u0026rsquo;s source code.\nDevOpsDays KC 2018 Workshop This repository contains instructions and labs related Jenkins Pipeline Workshop.\n\n"
+	"description": "Jenkins Pipeline Workshop",
+	"content": " Jenkins Pipeline Jenkins 2 brings Pipeline as code, a new setup experience and other UI improvements, let you define delivery pipelines using concise Groovy scripts which deal elegantly with jobs involving persistence and asynchrony. Introduces a domain-specific language (DSL) that helps Jenkins users to model their software delivery pipelines as code, which can be checked in and version-controlled along with the rest of their project\u0026rsquo;s source code.\nThis repository contains instructions and labs related Jenkins Pipeline Workshop.\n"
 },
 {
 	"uri": "https://nrayapati.github.io/devopsdays_library/tags/advanced/",
