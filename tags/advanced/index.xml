@@ -21,30 +21,12 @@
     </item>
     
     <item>
-      <title>Config File Provider</title>
-      <link>https://nrayapati.github.io/devopsdays_library/labs/advanced/configfile/</link>
+      <title>Remote Loader</title>
+      <link>https://nrayapati.github.io/devopsdays_library/labs/advanced/remoteloader/</link>
       <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://nrayapati.github.io/devopsdays_library/labs/advanced/configfile/</guid>
-      <description> Config File Provider node { configFileProvider([configFile(fileId: &#39;sample_json&#39;, variable: &#39;testJsonFileName&#39;)]) { println testJsonFileName.toString() def testJsonfile = readFile &amp;quot;${testJsonFileName.toString()}&amp;quot; println testJsonfile } }  </description>
-    </item>
-    
-    <item>
-      <title>Flow Control</title>
-      <link>https://nrayapati.github.io/devopsdays_library/labs/advanced/flow/</link>
-      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://nrayapati.github.io/devopsdays_library/labs/advanced/flow/</guid>
-      <description> Flow Control @Library(&amp;quot;devopsdays&amp;quot;) _ input message: &#39;INPUT EXAMPLE&#39;, ok: &#39;DevOpsDays&#39;, parameters: [string(defaultValue: &#39;&#39;, description: &#39;&#39;, name: &#39;STRING_PARAM&#39;, trim: false), booleanParam(defaultValue: false, description: &#39;&#39;, name: &#39;BOOLEAN_PARAM&#39;)] retryWithPrompt { error &amp;quot;error during the demo&amp;quot; }  </description>
-    </item>
-    
-    <item>
-      <title>Job DSL</title>
-      <link>https://nrayapati.github.io/devopsdays_library/labs/advanced/jobdsl/</link>
-      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://nrayapati.github.io/devopsdays_library/labs/advanced/jobdsl/</guid>
-      <description> Job DSL folder(&amp;quot;DevOpsDays/3_Best_Practices/test_folder&amp;quot;) { } pipelineJob(&#39;DevOpsDays/3_Best_Practices/test_folder/simple_pipeline&#39;) { displayName(&#39;simple_pipeline&#39;) description(&#39;simple_pipeline&#39;) definition { cpsScm { scm { git { remote { url(&#39;https://github.com/nrayapati/devopsdays_test.git&#39;) branch(&#39;master&#39;) } } } } } triggers { githubPush() } properties { buildDiscarder { strategy { logRotator { artifactDaysToKeepStr(&#39;2&#39;) artifactNumToKeepStr(&#39;2&#39;) daysToKeepStr(&#39;2&#39;) numToKeepStr(&#39;2&#39;) } } } } }  </description>
+      <guid>https://nrayapati.github.io/devopsdays_library/labs/advanced/remoteloader/</guid>
+      <description> Pipeline Remote Loader node { def remoteScript = fileLoader.fromGit(&#39;jenkins/release.groovy&#39;, &amp;quot;https://github.com/nrayapati/devopsdays_test.git&amp;quot;, &#39;master&#39;, null, &#39;&#39;) remoteScript.prepare() remoteScript.release() remoteScript.clean() }  </description>
     </item>
     
     <item>
@@ -57,12 +39,22 @@
     </item>
     
     <item>
-      <title>Remote Loader</title>
-      <link>https://nrayapati.github.io/devopsdays_library/labs/advanced/remoteloader/</link>
+      <title>Config File Provider</title>
+      <link>https://nrayapati.github.io/devopsdays_library/labs/advanced/configfile/</link>
       <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://nrayapati.github.io/devopsdays_library/labs/advanced/remoteloader/</guid>
-      <description> Pipeline Remote Loader node { def remoteScript = fileLoader.fromGit(&#39;jenkins/release.groovy&#39;, &amp;quot;https://github.com/nrayapati/devopsdays_test.git&amp;quot;, &#39;master&#39;, null, &#39;&#39;) remoteScript.prepare() remoteScript.release() remoteScript.clean() }  </description>
+      <guid>https://nrayapati.github.io/devopsdays_library/labs/advanced/configfile/</guid>
+      <description> Config File Provider node { configFileProvider([configFile(fileId: &#39;sample_json&#39;, variable: &#39;testJsonFileName&#39;)]) { println testJsonFileName.toString() def testJsonfile = readFile &amp;quot;${testJsonFileName.toString()}&amp;quot; println testJsonfile } }  </description>
+    </item>
+    
+    <item>
+      <title>Script Approval vs Sandbox</title>
+      <link>https://nrayapati.github.io/devopsdays_library/labs/advanced/scriptapproval/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nrayapati.github.io/devopsdays_library/labs/advanced/scriptapproval/</guid>
+      <description> Script Approval vs Sandbox Code at https://github.com/nrayapati/devopsdays_library/blob/master/vars/retryWithPrompt.groovy#L17
+@Library(&amp;quot;devopsdays&amp;quot;) _ retryWithPrompt { error &amp;quot;Anticipated error...&amp;quot; }  </description>
     </item>
     
     <item>
@@ -75,13 +67,21 @@
     </item>
     
     <item>
-      <title>Script Approval vs Sandbox</title>
-      <link>https://nrayapati.github.io/devopsdays_library/labs/advanced/scriptapproval/</link>
+      <title>Job DSL</title>
+      <link>https://nrayapati.github.io/devopsdays_library/labs/advanced/jobdsl/</link>
       <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://nrayapati.github.io/devopsdays_library/labs/advanced/scriptapproval/</guid>
-      <description> Script Approval vs Sandbox Code at https://github.com/nrayapati/devopsdays_library/blob/master/vars/retryWithPrompt.groovy#L17
-@Library(&amp;quot;devopsdays&amp;quot;) _ retryWithPrompt { error &amp;quot;Anticipated error...&amp;quot; }  </description>
+      <guid>https://nrayapati.github.io/devopsdays_library/labs/advanced/jobdsl/</guid>
+      <description> Job DSL folder(&amp;quot;DevOpsDays/3_Best_Practices/test_folder&amp;quot;) { } pipelineJob(&#39;DevOpsDays/3_Best_Practices/test_folder/simple_pipeline&#39;) { displayName(&#39;simple_pipeline&#39;) description(&#39;simple_pipeline&#39;) definition { cpsScm { scm { git { remote { url(&#39;https://github.com/nrayapati/devopsdays_test.git&#39;) branch(&#39;master&#39;) } } } } } triggers { githubPush() } properties { buildDiscarder { strategy { logRotator { artifactDaysToKeepStr(&#39;2&#39;) artifactNumToKeepStr(&#39;2&#39;) daysToKeepStr(&#39;2&#39;) numToKeepStr(&#39;2&#39;) } } } } }  </description>
+    </item>
+    
+    <item>
+      <title>Flow Control</title>
+      <link>https://nrayapati.github.io/devopsdays_library/labs/advanced/flow/</link>
+      <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://nrayapati.github.io/devopsdays_library/labs/advanced/flow/</guid>
+      <description> Flow Control @Library(&amp;quot;devopsdays&amp;quot;) _ input message: &#39;INPUT EXAMPLE&#39;, ok: &#39;DevOpsDays&#39;, parameters: [string(defaultValue: &#39;&#39;, description: &#39;&#39;, name: &#39;STRING_PARAM&#39;, trim: false), booleanParam(defaultValue: false, description: &#39;&#39;, name: &#39;BOOLEAN_PARAM&#39;)] retryWithPrompt { error &amp;quot;error during the demo&amp;quot; }  </description>
     </item>
     
   </channel>

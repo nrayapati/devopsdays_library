@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>Closure vs Map</title>
-      <link>https://nrayapati.github.io/devopsdays_library/labs/library/closure/</link>
+      <title>Using Shared Library</title>
+      <link>https://nrayapati.github.io/devopsdays_library/labs/library/using/</link>
       <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://nrayapati.github.io/devopsdays_library/labs/library/closure/</guid>
-      <description> Closure vs Map @Library(&amp;quot;devopsdays&amp;quot;) _ // Closure // Code at https://github.com/nrayapati/devopsdays_library/blob/master/vars/createGitBranchV1.groovy createGitBranchV1 { source = &amp;quot;master&amp;quot; target = &amp;quot;test&amp;quot; } // Map // Code at https://github.com/nrayapati/devopsdays_library/blob/master/vars/createGitBranchV2.groovy createGitBranchV2([source: &#39;gh-pages&#39;, target: &#39;test&#39;])  </description>
+      <guid>https://nrayapati.github.io/devopsdays_library/labs/library/using/</guid>
+      <description> Using Shared Library @Library(&amp;quot;devopsdays@master&amp;quot;) _ @Library(&amp;quot;github.com/nrayapati/devopsdays_library@master&amp;quot;) _ node { def yaml = libraryResource &#39;org/devopsdays/test.yml&#39; println yaml writeFile file: &#39;test.groovy&#39;, text: &#39;&#39;&#39;// Methods in this file will end up as object methods on the object that load returns. def lookAtThis(String whoAreYou) { echo &amp;quot;Look at this, ${whoAreYou}! You loaded this from another file!&amp;quot; } return this;&#39;&#39;&#39; def loadMethod = load &#39;test.groovy&#39; loadMethod.lookAtThis(&amp;quot;Naresh&amp;quot;) }  </description>
     </item>
     
     <item>
@@ -30,12 +30,12 @@
     </item>
     
     <item>
-      <title>Using Shared Library</title>
-      <link>https://nrayapati.github.io/devopsdays_library/labs/library/using/</link>
+      <title>Closure vs Map</title>
+      <link>https://nrayapati.github.io/devopsdays_library/labs/library/closure/</link>
       <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://nrayapati.github.io/devopsdays_library/labs/library/using/</guid>
-      <description> Using Shared Library @Library(&amp;quot;devopsdays@master&amp;quot;) _ @Library(&amp;quot;github.com/nrayapati/devopsdays_library@master&amp;quot;) _ node { def yaml = libraryResource &#39;org/devopsdays/test.yml&#39; println yaml writeFile file: &#39;test.groovy&#39;, text: &#39;&#39;&#39;// Methods in this file will end up as object methods on the object that load returns. def lookAtThis(String whoAreYou) { echo &amp;quot;Look at this, ${whoAreYou}! You loaded this from another file!&amp;quot; } return this;&#39;&#39;&#39; def loadMethod = load &#39;test.groovy&#39; loadMethod.lookAtThis(&amp;quot;Naresh&amp;quot;) }  </description>
+      <guid>https://nrayapati.github.io/devopsdays_library/labs/library/closure/</guid>
+      <description> Closure vs Map @Library(&amp;quot;devopsdays&amp;quot;) _ // Closure // Code at https://github.com/nrayapati/devopsdays_library/blob/master/vars/createGitBranchV1.groovy createGitBranchV1 { source = &amp;quot;master&amp;quot; target = &amp;quot;test&amp;quot; } // Map // Code at https://github.com/nrayapati/devopsdays_library/blob/master/vars/createGitBranchV2.groovy createGitBranchV2([source: &#39;gh-pages&#39;, target: &#39;test&#39;])  </description>
     </item>
     
   </channel>

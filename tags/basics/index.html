@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.49" />
+<meta name="generator" content="Hugo 0.55.6" />
 <title>Basics :: Jenkins Pipeline Workshop Resources</title>
 <link rel="shortcut icon" href="/devopsdays_library/images/favicon.png" type="image/x-icon" />
 <link href="/devopsdays_library/css/font-awesome.min.css" rel="stylesheet">
@@ -396,33 +396,10 @@
 
    <article class="post labs">
     <header class="post-header">
-        <h2 class="post-title"><a href="/devopsdays_library/labs/basics/cleanws/">Clean Workspace</a></h2>
+        <h2 class="post-title"><a href="/devopsdays_library/labs/basics/jenkinsfile/">Jenkinsfile</a></h2>
     </header>
     <section class="post-excerpt">
-        <p> Clean Workspace / Try/Catch stage('test') { node('LINUX') { step([$class: 'WsCleanup']) git branch: 'test', url: 'https://github.com/nrayapati/devopsdays_test.git' step([$class: 'WsCleanup']) } } stage('test') { node('LINUX') { try { git branch: 'test', url: 'https://github.com/nrayapati/devopsdays_test.git' sh 'ls -lrt' } finally { deleteDir() sh 'ls -lrt' } } }   <a class="read-more" href="/devopsdays_library/labs/basics/cleanws/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-            <i class='fa fa-user'></i> <a href="mailto:">Naresh Rayapati</a>  <i class='fa fa-calendar'></i> 13/10/2018
-        
-
-        
-          
-            
-                <a class="label label-default" href="https://nrayapati.github.io/devopsdays_library/tags/basics/">Basics</a>
-            
-        
-
-    </footer>
-</article>
-
-   <article class="post labs">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/devopsdays_library/labs/basics/credentials/">Credentials</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p> Credentials def printName def printPassword withCredentials([usernamePassword(credentialsId: 'devopsdays', passwordVariable: 'password', usernameVariable: 'userName')]) { // Binding variables echo userName echo password c // environment variables echo env.userName echo env.password printName = userName printPassword = password } echo env.userName echo env.password echo printName echo printPassword   <a class="read-more" href="/devopsdays_library/labs/basics/credentials/">&raquo;</a></p>
+        <p> Jenkinsfile Code: node { echo 'Hello World' }   <a class="read-more" href="/devopsdays_library/labs/basics/jenkinsfile/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -446,6 +423,29 @@
     </header>
     <section class="post-excerpt">
         <p> Declarative vs Scripted Declarative pipeline { agent any stages { stage('Example') { steps { echo 'Hello World' } } } post { always { echo 'I will always say Hello again!' } } }  Scripted node { try { echo 'Hello World' } finally { echo 'I will always say Hello again!' } }   <a class="read-more" href="/devopsdays_library/labs/basics/declarative/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+            <i class='fa fa-user'></i> <a href="mailto:">Naresh Rayapati</a>  <i class='fa fa-calendar'></i> 13/10/2018
+        
+
+        
+          
+            
+                <a class="label label-default" href="https://nrayapati.github.io/devopsdays_library/tags/basics/">Basics</a>
+            
+        
+
+    </footer>
+</article>
+
+   <article class="post labs">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/devopsdays_library/labs/basics/node/">Node/Stage/Step/Groovy</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p> Node/Stage/Step/Groovy Code def roomNumber = 10 node { echo 'ANY' } node('LINUX') { echo 'LINUX' } node('DEVOPSDAYS') { stage('KC') { if(roomNumber==10) { echo 'Jenkins Pipelines' } } } node('TEST') { echo 'TEST' }   <a class="read-more" href="/devopsdays_library/labs/basics/node/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -489,79 +489,10 @@ node { checkout scm sh 'ls -lrt' }   <a class="read-more" href="/devopsdays_libr
 
    <article class="post labs">
     <header class="post-header">
-        <h2 class="post-title"><a href="/devopsdays_library/labs/basics/jenkinsfile/">Jenkinsfile</a></h2>
+        <h2 class="post-title"><a href="/devopsdays_library/labs/basics/tools/">Tools</a></h2>
     </header>
     <section class="post-excerpt">
-        <p> Jenkinsfile Code: node { echo 'Hello World' }   <a class="read-more" href="/devopsdays_library/labs/basics/jenkinsfile/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-            <i class='fa fa-user'></i> <a href="mailto:">Naresh Rayapati</a>  <i class='fa fa-calendar'></i> 13/10/2018
-        
-
-        
-          
-            
-                <a class="label label-default" href="https://nrayapati.github.io/devopsdays_library/tags/basics/">Basics</a>
-            
-        
-
-    </footer>
-</article>
-
-   <article class="post labs">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/devopsdays_library/labs/basics/node/">Node/Stage/Step/Groovy</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p> Node/Stage/Step/Groovy Code def roomNumber = 10 node { echo 'ANY' } node('LINUX') { echo 'LINUX' } node('DEVOPSDAYS') { stage('KC') { if(roomNumber==10) { echo 'Jenkins Pipelines' } } } node('TEST') { echo 'TEST' }   <a class="read-more" href="/devopsdays_library/labs/basics/node/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-            <i class='fa fa-user'></i> <a href="mailto:">Naresh Rayapati</a>  <i class='fa fa-calendar'></i> 13/10/2018
-        
-
-        
-          
-            
-                <a class="label label-default" href="https://nrayapati.github.io/devopsdays_library/tags/basics/">Basics</a>
-            
-        
-
-    </footer>
-</article>
-
-   <article class="post labs">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/devopsdays_library/labs/basics/parallel/">Parallel</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p> Parallel def branches = [:] branches[&quot;ANY&quot;] = { node { sleep time: 1, unit: 'MINUTES' } } branches[&quot;LINUX&quot;] = { node('LINUX') { sleep time: 1, unit: 'MINUTES' } } branches[&quot;DEVOPSDAYS&quot;] = { node('DEVOPSDAYS') { sleep time: 1, unit: 'MINUTES' } } parallel branches   <a class="read-more" href="/devopsdays_library/labs/basics/parallel/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-            <i class='fa fa-user'></i> <a href="mailto:">Naresh Rayapati</a>  <i class='fa fa-calendar'></i> 13/10/2018
-        
-
-        
-          
-            
-                <a class="label label-default" href="https://nrayapati.github.io/devopsdays_library/tags/basics/">Basics</a>
-            
-        
-
-    </footer>
-</article>
-
-   <article class="post labs">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/devopsdays_library/labs/basics/params/">Parameters</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p> Parameters def job_params = [booleanParam(defaultValue: false, description: '', name: 'DEPLOY'), string(defaultValue: 'Rao', description: 'User name with sudo access.', name: 'USER_NAME'), password(defaultValue: 'secret', description: 'Only required with SSH_USER', name: 'PASSWORD')] properties([parameters(job_params)]) println params.USER_NAME println env.USER_NAME println &quot;${params.USER_NAME}&quot;   <a class="read-more" href="/devopsdays_library/labs/basics/params/">&raquo;</a></p>
+        <p> Tools node { def mvnHome stage('Preparation') { git 'https://github.com/jglick/simple-maven-project-with-tests.git' mvnHome = tool 'maven-3.5.4' } stage('Build') { if (isUnix()) { sh &quot;'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean &quot; } else { bat(/&quot;${mvnHome}\bin\mvn&quot; -Dmaven.test.failure.ignore clean /) } } }   <a class="read-more" href="/devopsdays_library/labs/basics/tools/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -604,10 +535,79 @@ node { checkout scm sh 'ls -lrt' }   <a class="read-more" href="/devopsdays_libr
 
    <article class="post labs">
     <header class="post-header">
+        <h2 class="post-title"><a href="/devopsdays_library/labs/basics/credentials/">Credentials</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p> Credentials def printName def printPassword withCredentials([usernamePassword(credentialsId: 'devopsdays', passwordVariable: 'password', usernameVariable: 'userName')]) { // Binding variables echo userName echo password c // environment variables echo env.userName echo env.password printName = userName printPassword = password } echo env.userName echo env.password echo printName echo printPassword   <a class="read-more" href="/devopsdays_library/labs/basics/credentials/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+            <i class='fa fa-user'></i> <a href="mailto:">Naresh Rayapati</a>  <i class='fa fa-calendar'></i> 13/10/2018
+        
+
+        
+          
+            
+                <a class="label label-default" href="https://nrayapati.github.io/devopsdays_library/tags/basics/">Basics</a>
+            
+        
+
+    </footer>
+</article>
+
+   <article class="post labs">
+    <header class="post-header">
         <h2 class="post-title"><a href="/devopsdays_library/labs/basics/stash/">Stash and Unstash</a></h2>
     </header>
     <section class="post-excerpt">
         <p> Stash vs Unstash node('LINUX') { sh &quot;mkdir -p output&quot; writeFile file: &quot;output/somefile&quot;, text: &quot;Hey look, some text.&quot; stash name: &quot;stash1&quot;, includes: &quot;output/*&quot; sh &quot;rm -rf output&quot; sh &quot;ls -lrt&quot; } node('DEVOPSDAYS') { sh 'ls -lrt' unstash name: &quot;stash1&quot; sh 'ls -lrt' }   <a class="read-more" href="/devopsdays_library/labs/basics/stash/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+            <i class='fa fa-user'></i> <a href="mailto:">Naresh Rayapati</a>  <i class='fa fa-calendar'></i> 13/10/2018
+        
+
+        
+          
+            
+                <a class="label label-default" href="https://nrayapati.github.io/devopsdays_library/tags/basics/">Basics</a>
+            
+        
+
+    </footer>
+</article>
+
+   <article class="post labs">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/devopsdays_library/labs/basics/cleanws/">Clean Workspace</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p> Clean Workspace / Try/Catch stage('test') { node('LINUX') { step([$class: 'WsCleanup']) git branch: 'test', url: 'https://github.com/nrayapati/devopsdays_test.git' step([$class: 'WsCleanup']) } } stage('test') { node('LINUX') { try { git branch: 'test', url: 'https://github.com/nrayapati/devopsdays_test.git' sh 'ls -lrt' } finally { deleteDir() sh 'ls -lrt' } } }   <a class="read-more" href="/devopsdays_library/labs/basics/cleanws/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+            <i class='fa fa-user'></i> <a href="mailto:">Naresh Rayapati</a>  <i class='fa fa-calendar'></i> 13/10/2018
+        
+
+        
+          
+            
+                <a class="label label-default" href="https://nrayapati.github.io/devopsdays_library/tags/basics/">Basics</a>
+            
+        
+
+    </footer>
+</article>
+
+   <article class="post labs">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/devopsdays_library/labs/basics/params/">Parameters</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p> Parameters def job_params = [booleanParam(defaultValue: false, description: '', name: 'DEPLOY'), string(defaultValue: 'Rao', description: 'User name with sudo access.', name: 'USER_NAME'), password(defaultValue: 'secret', description: 'Only required with SSH_USER', name: 'PASSWORD')] properties([parameters(job_params)]) println params.USER_NAME println env.USER_NAME println &quot;${params.USER_NAME}&quot;   <a class="read-more" href="/devopsdays_library/labs/basics/params/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          

@@ -4,7 +4,7 @@
 	"title": "Basics Labs",
 	"tags": [],
 	"description": "",
-	"content": " List of Programs for Basics Lab.  Jenkinsfile     Declarative vs Scripted Pipeline     Node/Stage/Step/Groovy     Git vs Checkout SCM     Tools     Shell Script     Credentials     Stash and Unstash     Clean Workspace     Parameters     Strings     Parallel     "
+	"content": " List of Programs for Basics Lab.  Jenkinsfile     Declarative vs Scripted Pipeline   \n Node/Stage/Step/Groovy   \n Git vs Checkout SCM   \n Tools   \n Shell Script   \n Credentials   \n Stash and Unstash   \n Clean Workspace   \n Parameters   \n Strings   \n Parallel    \n"
 },
 {
 	"uri": "https://nrayapati.github.io/devopsdays_library/setup/",
@@ -32,14 +32,14 @@
 	"title": "List of Labs",
 	"tags": [],
 	"description": "",
-	"content": " All Labs.  Basics Labs    Jenkinsfile   Declarative vs Scripted Pipeline   Node/Stage/Step/Groovy   Git vs Checkout SCM   Tools   Shell Script   Credentials   Stash and Unstash   Clean Workspace   Parameters   Strings   Parallel    Shared Pipeline Library Labs    Using Shared Library   Example   Closure vs Map    Advanced Labs    Build Name   Remote Loader   Lockable Resources   Config File Provider   Script Approval vs Sandbox   SSH Agent   Job DSL   Flow Control    "
+	"content": " All Labs.  Basics Labs    Jenkinsfile   Declarative vs Scripted Pipeline   Node/Stage/Step/Groovy   Git vs Checkout SCM   Tools   Shell Script   Credentials   Stash and Unstash   Clean Workspace   Parameters   Strings   Parallel    Shared Pipeline Library Labs  \n Using Shared Library \n Example \n Closure vs Map  \n Advanced Labs  \n Build Name \n Remote Loader \n Lockable Resources \n Config File Provider \n Script Approval vs Sandbox \n SSH Agent \n Job DSL \n Flow Control   \n"
 },
 {
 	"uri": "https://nrayapati.github.io/devopsdays_library/labs/library/",
 	"title": "Shared Pipeline Library Labs",
 	"tags": [],
 	"description": "",
-	"content": " List of Programs for Shared Pipeline Library Lab.  Using Shared Library     Example     Closure vs Map     "
+	"content": " List of Programs for Shared Pipeline Library Lab.  Using Shared Library     Example   \n Closure vs Map    \n"
 },
 {
 	"uri": "https://nrayapati.github.io/devopsdays_library/labs/library/using/",
@@ -60,7 +60,7 @@
 	"title": "Advanced Labs",
 	"tags": [],
 	"description": "",
-	"content": " List of Programs for Advanced Lab.  Build Name     Remote Loader     Lockable Resources     Config File Provider     Script Approval vs Sandbox     SSH Agent     Job DSL     Flow Control     "
+	"content": " List of Programs for Advanced Lab.  Build Name     Remote Loader   \n Lockable Resources   \n Config File Provider   \n Script Approval vs Sandbox   \n SSH Agent   \n Job DSL   \n Flow Control    \n"
 },
 {
 	"uri": "https://nrayapati.github.io/devopsdays_library/labs/basics/declarative/",
@@ -81,7 +81,7 @@
 	"title": "Pipeline Steps",
 	"tags": [],
 	"description": "",
-	"content": " List of Pipeline Steps  createGitBranchV1     createGitBranchV2     retryAndReturn     retryWithPrompt     "
+	"content": " List of Pipeline Steps  createGitBranchV1     createGitBranchV2   \n retryAndReturn   \n retryWithPrompt    \n"
 },
 {
 	"uri": "https://nrayapati.github.io/devopsdays_library/labs/advanced/remoteloader/",
@@ -144,7 +144,7 @@
 	"title": "retryWithPrompt",
 	"tags": ["General"],
 	"description": "Retry With Prompt",
-	"content": " retryWithPrompt Executes given body and when it throws an exception, it will prompt user with options to Retry, Ignore or Abort. If it should be retried. The body will then be executed again. If the user clicks abort, an exception will be thrown aborting the pipeline. And there is an option to ignore to proceed further, need to careful of doing so, as some of the steps which were failed may cause some trouble down the line for other actions, so user can ignore when the step being surrounded by this step manually.\nUsage  stepName - Name of step, to be more meaningful while message being shown up in the chat room. (Optional - Defaults to ?) timeOut - Timeout in minutes.  retryWithPrompt Examples retryWithPrompt ([timeOut: 10, stepName: 'Optional']) { echo 'I am fine.' }  retryWithPrompt ([timeOut: 10, stepName: 'testing']) { error 'something wrong.' }   Classic View - Waiting for User input   "
+	"content": " retryWithPrompt Executes given body and when it throws an exception, it will prompt user with options to Retry, Ignore or Abort. If it should be retried. The body will then be executed again. If the user clicks abort, an exception will be thrown aborting the pipeline. And there is an option to ignore to proceed further, need to careful of doing so, as some of the steps which were failed may cause some trouble down the line for other actions, so user can ignore when the step being surrounded by this step manually.\nUsage  stepName - Name of step, to be more meaningful while message being shown up in the chat room. (Optional - Defaults to ?) timeOut - Timeout in minutes.  **retryWithPrompt** Examples retryWithPrompt ([timeOut: 10, stepName: 'Optional']) { echo 'I am fine.' }  retryWithPrompt ([timeOut: 10, stepName: 'testing']) { error 'something wrong.' }   Classic View - Waiting for User input  \n"
 },
 {
 	"uri": "https://nrayapati.github.io/devopsdays_library/labs/advanced/scriptapproval/",
@@ -235,7 +235,7 @@
 	"title": "Jenkins Pipelines Workshop",
 	"tags": [],
 	"description": "Jenkins Pipeline Workshop",
-	"content": " Jenkins Pipeline Jenkins 2 brings Pipeline as code, a new setup experience and other UI improvements, let you define delivery pipelines using concise Groovy scripts which deal elegantly with jobs involving persistence and asynchrony. Introduces a domain-specific language (DSL) that helps Jenkins users to model their software delivery pipelines as code, which can be checked in and version-controlled along with the rest of their project\u0026rsquo;s source code.\nThis repository contains instructions and labs related Jenkins Pipeline Workshop.\n"
+	"content": " Jenkins Pipeline Jenkins 2 brings Pipeline as code, a new setup experience and other UI improvements, let you define delivery pipelines using concise Groovy scripts which deal elegantly with jobs involving persistence and asynchrony. Introduces a domain-specific language (DSL) that helps Jenkins users to model their software delivery pipelines as code, which can be checked in and version-controlled along with the rest of their project\u0026rsquo;s source code.\nThis repository contains instructions and labs related Jenkins Pipeline Workshop.\nSlides .embed-container { position: relative; padding-bottom: 58.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }\n"
 },
 {
 	"uri": "https://nrayapati.github.io/devopsdays_library/tags/advanced/",
@@ -247,13 +247,6 @@
 {
 	"uri": "https://nrayapati.github.io/devopsdays_library/tags/basics/",
 	"title": "Basics",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://nrayapati.github.io/devopsdays_library/categories/",
-	"title": "Categories",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -275,6 +268,13 @@
 {
 	"uri": "https://nrayapati.github.io/devopsdays_library/tags/",
 	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://nrayapati.github.io/devopsdays_library/categories/",
+	"title": "Categories",
 	"tags": [],
 	"description": "",
 	"content": ""

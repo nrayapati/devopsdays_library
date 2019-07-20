@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.49" />
+<meta name="generator" content="Hugo 0.55.6" />
 <title>Basics :: Jenkins Pipeline Workshop Resources</title>
 <link rel="shortcut icon" href="/devopsdays_library/images/favicon.png" type="image/x-icon" />
 <link href="/devopsdays_library/css/font-awesome.min.css" rel="stylesheet">
@@ -419,10 +419,10 @@
 
    <article class="post labs">
     <header class="post-header">
-        <h2 class="post-title"><a href="/devopsdays_library/labs/basics/tools/">Tools</a></h2>
+        <h2 class="post-title"><a href="/devopsdays_library/labs/basics/parallel/">Parallel</a></h2>
     </header>
     <section class="post-excerpt">
-        <p> Tools node { def mvnHome stage('Preparation') { git 'https://github.com/jglick/simple-maven-project-with-tests.git' mvnHome = tool 'maven-3.5.4' } stage('Build') { if (isUnix()) { sh &quot;'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean &quot; } else { bat(/&quot;${mvnHome}\bin\mvn&quot; -Dmaven.test.failure.ignore clean /) } } }   <a class="read-more" href="/devopsdays_library/labs/basics/tools/">&raquo;</a></p>
+        <p> Parallel def branches = [:] branches[&quot;ANY&quot;] = { node { sleep time: 1, unit: 'MINUTES' } } branches[&quot;LINUX&quot;] = { node('LINUX') { sleep time: 1, unit: 'MINUTES' } } branches[&quot;DEVOPSDAYS&quot;] = { node('DEVOPSDAYS') { sleep time: 1, unit: 'MINUTES' } } parallel branches   <a class="read-more" href="/devopsdays_library/labs/basics/parallel/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          

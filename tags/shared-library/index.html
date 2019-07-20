@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.49" />
+<meta name="generator" content="Hugo 0.55.6" />
 <title>Shared Library :: Jenkins Pipeline Workshop Resources</title>
 <link rel="shortcut icon" href="/devopsdays_library/images/favicon.png" type="image/x-icon" />
 <link href="/devopsdays_library/css/font-awesome.min.css" rel="stylesheet">
@@ -310,6 +310,41 @@
   
     <option value="/devopsdays_library/labs/" >
    List of Labs</option> 
+    <option value="/devopsdays_library/labs/basics/" >
+  - 
+   Basics Labs</option> 
+      <option value="/devopsdays_library/labs/basics/jenkinsfile/" >-- Jenkinsfile</option>
+      <option value="/devopsdays_library/labs/basics/declarative/" >-- Declarative vs Scripted Pipeline</option>
+      <option value="/devopsdays_library/labs/basics/node/" >-- Node/Stage/Step/Groovy</option>
+      <option value="/devopsdays_library/labs/basics/scm/" >-- Git vs Checkout SCM</option>
+      <option value="/devopsdays_library/labs/basics/tools/" >-- Tools</option>
+      <option value="/devopsdays_library/labs/basics/shell/" >-- Shell Script</option>
+      <option value="/devopsdays_library/labs/basics/credentials/" >-- Credentials</option>
+      <option value="/devopsdays_library/labs/basics/stash/" >-- Stash and Unstash</option>
+      <option value="/devopsdays_library/labs/basics/cleanws/" >-- Clean Workspace</option>
+      <option value="/devopsdays_library/labs/basics/params/" >-- Parameters</option>
+      <option value="/devopsdays_library/labs/basics/string/" >-- Strings</option>
+      <option value="/devopsdays_library/labs/basics/parallel/" >-- Parallel</option>
+  
+    <option value="/devopsdays_library/labs/library/" >
+  - 
+   Shared Pipeline Library Labs</option> 
+      <option value="/devopsdays_library/labs/library/using/" >-- Using Shared Library</option>
+      <option value="/devopsdays_library/labs/library/example/" >-- Example</option>
+      <option value="/devopsdays_library/labs/library/closure/" >-- Closure vs Map</option>
+  
+    <option value="/devopsdays_library/labs/advanced/" >
+  - 
+   Advanced Labs</option> 
+      <option value="/devopsdays_library/labs/advanced/buildname/" >-- Build Name</option>
+      <option value="/devopsdays_library/labs/advanced/remoteloader/" >-- Remote Loader</option>
+      <option value="/devopsdays_library/labs/advanced/lockable/" >-- Lockable Resources</option>
+      <option value="/devopsdays_library/labs/advanced/configfile/" >-- Config File Provider</option>
+      <option value="/devopsdays_library/labs/advanced/scriptapproval/" >-- Script Approval vs Sandbox</option>
+      <option value="/devopsdays_library/labs/advanced/sshagent/" >-- SSH Agent</option>
+      <option value="/devopsdays_library/labs/advanced/jobdsl/" >-- Job DSL</option>
+      <option value="/devopsdays_library/labs/advanced/flow/" >-- Flow Control</option>
+  
   
     <option value="/devopsdays_library/steps/" >
    Pipeline Steps</option> 
@@ -359,10 +394,10 @@
 
    <article class="post labs">
     <header class="post-header">
-        <h2 class="post-title"><a href="/devopsdays_library/labs/library/closure/">Closure vs Map</a></h2>
+        <h2 class="post-title"><a href="/devopsdays_library/labs/library/using/">Using Shared Library</a></h2>
     </header>
     <section class="post-excerpt">
-        <p> Closure vs Map @Library(&quot;devopsdays&quot;) _ // Closure // Code at https://github.com/nrayapati/devopsdays_library/blob/master/vars/createGitBranchV1.groovy createGitBranchV1 { source = &quot;master&quot; target = &quot;test&quot; } // Map // Code at https://github.com/nrayapati/devopsdays_library/blob/master/vars/createGitBranchV2.groovy createGitBranchV2([source: 'gh-pages', target: 'test'])   <a class="read-more" href="/devopsdays_library/labs/library/closure/">&raquo;</a></p>
+        <p> Using Shared Library @Library(&quot;devopsdays@master&quot;) _ @Library(&quot;github.com/nrayapati/devopsdays_library@master&quot;) _ node { def yaml = libraryResource 'org/devopsdays/test.yml' println yaml writeFile file: 'test.groovy', text: '''// Methods in this file will end up as object methods on the object that load returns. def lookAtThis(String whoAreYou) { echo &quot;Look at this, ${whoAreYou}! You loaded this from another file!&quot; } return this;''' def loadMethod = load 'test.groovy' loadMethod.lookAtThis(&quot;Naresh&quot;) }   <a class="read-more" href="/devopsdays_library/labs/library/using/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -405,10 +440,10 @@
 
    <article class="post labs">
     <header class="post-header">
-        <h2 class="post-title"><a href="/devopsdays_library/labs/library/using/">Using Shared Library</a></h2>
+        <h2 class="post-title"><a href="/devopsdays_library/labs/library/closure/">Closure vs Map</a></h2>
     </header>
     <section class="post-excerpt">
-        <p> Using Shared Library @Library(&quot;devopsdays@master&quot;) _ @Library(&quot;github.com/nrayapati/devopsdays_library@master&quot;) _ node { def yaml = libraryResource 'org/devopsdays/test.yml' println yaml writeFile file: 'test.groovy', text: '''// Methods in this file will end up as object methods on the object that load returns. def lookAtThis(String whoAreYou) { echo &quot;Look at this, ${whoAreYou}! You loaded this from another file!&quot; } return this;''' def loadMethod = load 'test.groovy' loadMethod.lookAtThis(&quot;Naresh&quot;) }   <a class="read-more" href="/devopsdays_library/labs/library/using/">&raquo;</a></p>
+        <p> Closure vs Map @Library(&quot;devopsdays&quot;) _ // Closure // Code at https://github.com/nrayapati/devopsdays_library/blob/master/vars/createGitBranchV1.groovy createGitBranchV1 { source = &quot;master&quot; target = &quot;test&quot; } // Map // Code at https://github.com/nrayapati/devopsdays_library/blob/master/vars/createGitBranchV2.groovy createGitBranchV2([source: 'gh-pages', target: 'test'])   <a class="read-more" href="/devopsdays_library/labs/library/closure/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          

@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.49" />
+<meta name="generator" content="Hugo 0.55.6" />
 <title>Advanced :: Jenkins Pipeline Workshop Resources</title>
 <link rel="shortcut icon" href="/devopsdays_library/images/favicon.png" type="image/x-icon" />
 <link href="/devopsdays_library/css/font-awesome.min.css" rel="stylesheet">
@@ -417,56 +417,10 @@
 
    <article class="post labs">
     <header class="post-header">
-        <h2 class="post-title"><a href="/devopsdays_library/labs/advanced/configfile/">Config File Provider</a></h2>
+        <h2 class="post-title"><a href="/devopsdays_library/labs/advanced/remoteloader/">Remote Loader</a></h2>
     </header>
     <section class="post-excerpt">
-        <p> Config File Provider node { configFileProvider([configFile(fileId: 'sample_json', variable: 'testJsonFileName')]) { println testJsonFileName.toString() def testJsonfile = readFile &quot;${testJsonFileName.toString()}&quot; println testJsonfile } }   <a class="read-more" href="/devopsdays_library/labs/advanced/configfile/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-            <i class='fa fa-user'></i> <a href="mailto:">Naresh Rayapati</a>  <i class='fa fa-calendar'></i> 13/10/2018
-        
-
-        
-          
-            
-                <a class="label label-default" href="https://nrayapati.github.io/devopsdays_library/tags/advanced/">Advanced</a>
-            
-        
-
-    </footer>
-</article>
-
-   <article class="post labs">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/devopsdays_library/labs/advanced/flow/">Flow Control</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p> Flow Control @Library(&quot;devopsdays&quot;) _ input message: 'INPUT EXAMPLE', ok: 'DevOpsDays', parameters: [string(defaultValue: '', description: '', name: 'STRING_PARAM', trim: false), booleanParam(defaultValue: false, description: '', name: 'BOOLEAN_PARAM')] retryWithPrompt { error &quot;error during the demo&quot; }   <a class="read-more" href="/devopsdays_library/labs/advanced/flow/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-            <i class='fa fa-user'></i> <a href="mailto:">Naresh Rayapati</a>  <i class='fa fa-calendar'></i> 13/10/2018
-        
-
-        
-          
-            
-                <a class="label label-default" href="https://nrayapati.github.io/devopsdays_library/tags/advanced/">Advanced</a>
-            
-        
-
-    </footer>
-</article>
-
-   <article class="post labs">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/devopsdays_library/labs/advanced/jobdsl/">Job DSL</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p> Job DSL folder(&quot;DevOpsDays/3_Best_Practices/test_folder&quot;) { } pipelineJob('DevOpsDays/3_Best_Practices/test_folder/simple_pipeline') { displayName('simple_pipeline') description('simple_pipeline') definition { cpsScm { scm { git { remote { url('https://github.com/nrayapati/devopsdays_test.git') branch('master') } } } } } triggers { githubPush() } properties { buildDiscarder { strategy { logRotator { artifactDaysToKeepStr('2') artifactNumToKeepStr('2') daysToKeepStr('2') numToKeepStr('2') } } } } }   <a class="read-more" href="/devopsdays_library/labs/advanced/jobdsl/">&raquo;</a></p>
+        <p> Pipeline Remote Loader node { def remoteScript = fileLoader.fromGit('jenkins/release.groovy', &quot;https://github.com/nrayapati/devopsdays_test.git&quot;, 'master', null, '') remoteScript.prepare() remoteScript.release() remoteScript.clean() }   <a class="read-more" href="/devopsdays_library/labs/advanced/remoteloader/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -509,10 +463,34 @@
 
    <article class="post labs">
     <header class="post-header">
-        <h2 class="post-title"><a href="/devopsdays_library/labs/advanced/remoteloader/">Remote Loader</a></h2>
+        <h2 class="post-title"><a href="/devopsdays_library/labs/advanced/configfile/">Config File Provider</a></h2>
     </header>
     <section class="post-excerpt">
-        <p> Pipeline Remote Loader node { def remoteScript = fileLoader.fromGit('jenkins/release.groovy', &quot;https://github.com/nrayapati/devopsdays_test.git&quot;, 'master', null, '') remoteScript.prepare() remoteScript.release() remoteScript.clean() }   <a class="read-more" href="/devopsdays_library/labs/advanced/remoteloader/">&raquo;</a></p>
+        <p> Config File Provider node { configFileProvider([configFile(fileId: 'sample_json', variable: 'testJsonFileName')]) { println testJsonFileName.toString() def testJsonfile = readFile &quot;${testJsonFileName.toString()}&quot; println testJsonfile } }   <a class="read-more" href="/devopsdays_library/labs/advanced/configfile/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+            <i class='fa fa-user'></i> <a href="mailto:">Naresh Rayapati</a>  <i class='fa fa-calendar'></i> 13/10/2018
+        
+
+        
+          
+            
+                <a class="label label-default" href="https://nrayapati.github.io/devopsdays_library/tags/advanced/">Advanced</a>
+            
+        
+
+    </footer>
+</article>
+
+   <article class="post labs">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/devopsdays_library/labs/advanced/scriptapproval/">Script Approval vs Sandbox</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p> Script Approval vs Sandbox Code at https://github.com/nrayapati/devopsdays_library/blob/master/vars/retryWithPrompt.groovy#L17
+@Library(&quot;devopsdays&quot;) _ retryWithPrompt { error &quot;Anticipated error...&quot; }   <a class="read-more" href="/devopsdays_library/labs/advanced/scriptapproval/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
@@ -555,11 +533,33 @@
 
    <article class="post labs">
     <header class="post-header">
-        <h2 class="post-title"><a href="/devopsdays_library/labs/advanced/scriptapproval/">Script Approval vs Sandbox</a></h2>
+        <h2 class="post-title"><a href="/devopsdays_library/labs/advanced/jobdsl/">Job DSL</a></h2>
     </header>
     <section class="post-excerpt">
-        <p> Script Approval vs Sandbox Code at https://github.com/nrayapati/devopsdays_library/blob/master/vars/retryWithPrompt.groovy#L17
-@Library(&quot;devopsdays&quot;) _ retryWithPrompt { error &quot;Anticipated error...&quot; }   <a class="read-more" href="/devopsdays_library/labs/advanced/scriptapproval/">&raquo;</a></p>
+        <p> Job DSL folder(&quot;DevOpsDays/3_Best_Practices/test_folder&quot;) { } pipelineJob('DevOpsDays/3_Best_Practices/test_folder/simple_pipeline') { displayName('simple_pipeline') description('simple_pipeline') definition { cpsScm { scm { git { remote { url('https://github.com/nrayapati/devopsdays_test.git') branch('master') } } } } } triggers { githubPush() } properties { buildDiscarder { strategy { logRotator { artifactDaysToKeepStr('2') artifactNumToKeepStr('2') daysToKeepStr('2') numToKeepStr('2') } } } } }   <a class="read-more" href="/devopsdays_library/labs/advanced/jobdsl/">&raquo;</a></p>
+    </section>
+    <footer class=" footline" >
+         
+        
+            <i class='fa fa-user'></i> <a href="mailto:">Naresh Rayapati</a>  <i class='fa fa-calendar'></i> 13/10/2018
+        
+
+        
+          
+            
+                <a class="label label-default" href="https://nrayapati.github.io/devopsdays_library/tags/advanced/">Advanced</a>
+            
+        
+
+    </footer>
+</article>
+
+   <article class="post labs">
+    <header class="post-header">
+        <h2 class="post-title"><a href="/devopsdays_library/labs/advanced/flow/">Flow Control</a></h2>
+    </header>
+    <section class="post-excerpt">
+        <p> Flow Control @Library(&quot;devopsdays&quot;) _ input message: 'INPUT EXAMPLE', ok: 'DevOpsDays', parameters: [string(defaultValue: '', description: '', name: 'STRING_PARAM', trim: false), booleanParam(defaultValue: false, description: '', name: 'BOOLEAN_PARAM')] retryWithPrompt { error &quot;error during the demo&quot; }   <a class="read-more" href="/devopsdays_library/labs/advanced/flow/">&raquo;</a></p>
     </section>
     <footer class=" footline" >
          
